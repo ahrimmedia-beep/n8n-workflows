@@ -27,6 +27,26 @@ flowchart LR
     R --> S
 ```
 
+## Screenshots
+
+Canvas views of four workflows. Node settings, code and credentials are not shown.
+
+**Outbound dialer.** Checks working hours, reads new contacts from Google Sheets, then calls them one by one with a pause between calls.
+
+![Outbound dialer](docs/screenshots/outbound-dialer.png)
+
+**Call results to CRM.** Each call outcome goes its own way: no answer gets a callback task, interest moves the deal and alerts a manager, a finished call adds the transcript and moves a "no" to nurture.
+
+![Call results to CRM](docs/screenshots/call-results-to-crm.png)
+
+**Voice bot lead router.** Sorts leads from the voice bot into hot, warm and cold, creates deals in amoCRM and logs every call to Google Sheets.
+
+![Voice bot lead router](docs/screenshots/voice-bot-lead-router.png)
+
+**Voice lead intake.** Checks that the request is genuine, then sends the lead to HubSpot and posts alerts to Telegram.
+
+![Voice lead intake](docs/screenshots/voice-lead-intake.png)
+
 ## Stack
 
 n8n, Voximplant, VAPI, amoCRM API, HubSpot API, Telegram Bot API, Google Sheets API, webhooks.
